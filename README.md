@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # HangmanGame
 Theme : 
 Objective {
@@ -13,3 +14,7 @@ Objective {
 		6. wrongGuesses var that displays the letters that have been guessed.
 
 		
+=======
+ # Hangman Game
+Christmas Theme!
+>>>>>>> 1c6abe98a9179f1d4f29668f4065fe962865426b
