@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 # HangmanGame
-Theme : 
+Theme :
 Objective {
 	1: Use event listener to watch for keys pressed by the "player"
 	Display [
@@ -12,9 +11,3 @@ Objective {
 			// Ex. _ _ _ _    --->   j _ _ a
 		5. numberOfGuessLeft var that counts down.
 		6. wrongGuesses var that displays the letters that have been guessed.
-
-		
-=======
- # Hangman Game
-Christmas Theme!
->>>>>>> 1c6abe98a9179f1d4f29668f4065fe962865426b
