@@ -1,0 +1,21 @@
+body {
+  background-color: green;
+  color: white;
+}
+.jumbotron {
+  background-color: darkred;
+}
+.title {
+  text-align: center;
+  color: white;
+}
+h1.title {
+  font-size: 1.9em;
+  font-weight: bolder;
+}
+h3.title {
+  font-size: 1.4em;
+}
+.boxy {
+  border: 2px solid red;
+}
