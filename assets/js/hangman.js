@@ -1,39 +1,27 @@
-$(document).ready(function() {
+var hangman = {
+  words = [ "elves", "santa", "rudolph", "presents", "winter", "snow" ],
+  word: "",
+  guesses: 6,
+  wordsCorrect: 0,
+  displayWord: function() {
+    var blank = document.createElement("p");
+    var blanks = document.createTextNode("_ ");
+    blank.appendChild(blanks);
 
-  var words = [ "elves", "santa", "rudolph", "presents", "winter", "snow" ];
+    var wrongBox =  document.getElementById("wrong-letter-box");
+    wrongBox.appendChild(blank); n
 
-  var hangman = {
-    correctWords: 0,
-    guesses: 6,
-    currentWord: new String();
-    wrongLetters: new Array();
-    startGame: function() {
+  },
+  lose: function(){
+    alert("You lose. Refresh the Page and Try Again!");
+  },
+  start: function() {
+    while (wordsCorrect > 6) {
 
-    }
   }
-  // Loops through words
-  for (i = 0; i < words.length; i++) {
-    //splits words[i] into an array of strings
-    var wordStrArr = words[i].split("");
-    var
+},
 
-
-    }
-});
- //    ##Snippet from class##
- // document.onkeyup = function(event) {
- //        var key = event.keyCode;
- //        if (key == 72) {
- //          car.honk();
- //        } else if (key == 87) {
- //          car.driveAroundWorld();
- //        } else if (key == 68){
- //          car.driveToWork();
- //        } else if (key == 84)
- //         car.getTuneUp();
- //        } else {
- //        console.log('Try a different key.')
- //      };
-
-
-// obj?
+};
+// Loops through words
+// $(document).ready(function() {
+// });
