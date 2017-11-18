@@ -1,22 +1,35 @@
 $(document).ready(function(){
-  $(document).keypress(function(key) {
-      $("#pregame-message").hide();
-      var letter = String.fromCharCode(key.which);
-      guessLetter(letter);
-  });
-
   var words = [ "elves", "santa", "rudolph", "presents", "winter", "snow" ];
   var selectedWord;
-  // The word in the array selected by chooseRandomWord method.
-  var guessedLetter;
   // The last key pressed
   var guessFields = [];
   // The "_ _ _ _" section
   var guesses = 6;
+  var correctGuesses = 0;
+
+  $(document).keypress(function(key) {
+      $("#pregame-message").hide();
+      var letter = String.fromCharCode(key.which);
+      guessLetter(letter);
+      if (guesses == 0) {
+        alert("You lose, try again.");
+        location.reload();
+      } else if (correctGuesses == selectedWord.length) {
+        alert("YOU WIN!! The word is " + selectedWord);
+        location.reload();
+      }
+  });
+
+
+
+
+
+
 
   function chooseRandomWord() {
     var randomIndex =  Math.floor(Math.random() * words.length);
     selectedWord = words[randomIndex];
+    numOfLetters = selectedWord.length;
     initializeGuessFields();
   }
 
@@ -25,22 +38,20 @@ $(document).ready(function(){
       letterField = "_";
       guessFields.push(letterField);
     })
-
     fields = guessFields.toString().replace(/,/g, " ");
     $("#word-format").text(fields);
+
   }
 
   function updateGuessFields(guessedLetter) {
     wordArray().forEach(function(letter) {
       if (guessedLetter == letter) {
         guessFields[i] = letter;
-      } else {
-        guesses--;
       }
     })
-
     fields = guessFields.toString().replace(/,/g, " ");
     $("#word-format").text(fields);
+
   }
 
   function wordArray() {
@@ -51,12 +62,16 @@ $(document).ready(function(){
     var letters = wordArray()
     for (i = 0; i < letters.length; i++) {
       if (letter == letters[i]) {
-        $("#guess-message").text("NICE GUESS!");
         updateGuessFields(letter);
-        }
+        correctGuesses++;
       }
     }
-  chooseRandomWord();
+    if ($.inArray(letter, letters) == -1){
+      guesses--;
+      $("#guesses").text(guesses);
+    }
+  }
+    chooseRandomWord();
 });
   // Make the "#start" button call the "startGame" method on click.
   // Make the "#guess" button call the "guessLetter" method on click.

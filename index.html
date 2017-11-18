@@ -9,39 +9,35 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 </head>
-<body>
 
+<body>
   <!-- Title  Area-->
   <div class="container jumbotron">
         <div class="top-title">
           <h1 class="title">Holiday Hangman Game</h1>
           <div id="pregame-message">
-            <h3>Press any key to guess a letter!</h3>
+            <h3>Press any key to get started!</h3>
           </div>
-          <hr>
+        </div>
+        <hr>
 
       <!-- Main Game Area  -->
-      <div class="">
         <p><b>Current Word:</b></p>
         <div id="word-format"></div>
-      </div>
+
       <!-- Scores/Guesses Section -->
       <div class="elf-box">
         <p><b>Guesses Remaining:</b>
-          <span id="guesses">6</span>
+          <span id="guesses"></span>
         </p>
       </div>
-    </div>
-    <h6>Incorrect Letters: </h6>
     <div class="wrong-letter-box">
+    <h6>Incorrect Letters: </h6>
 
-    </div>
     <div id="guess-field"></div>
   </div>
+</div>
 
   <script type="text/javascript" src="assets/js/hangman.js"></script>
-  <script type="text/javascript">
-
-  </script>
 </body>
 </html>
