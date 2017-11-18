@@ -1,30 +1,22 @@
 $(document).ready(function(){
   var words = [ "elves", "santa", "rudolph", "presents", "winter", "snow" ];
   var selectedWord;
-  // The last key pressed
   var guessFields = [];
-  // The "_ _ _ _" section
   var guesses = 6;
   var correctGuesses = 0;
 
   $(document).keypress(function(key) {
-      $("#pregame-message").hide();
-      var letter = String.fromCharCode(key.which);
-      guessLetter(letter);
-      if (guesses == 0) {
-        alert("You lose, try again.");
-        location.reload();
-      } else if (correctGuesses == selectedWord.length) {
-        alert("YOU WIN!! The word is " + selectedWord);
-        location.reload();
-      }
+    $("#pregame-message").hide();
+    var letter = String.fromCharCode(key.which);
+    guessLetter(letter);
+    if (guesses == 0) {
+      alert("You lose, try again.");
+      location.reload();
+    } else if (correctGuesses == selectedWord.length) {
+      alert("YOU WIN!! The word is " + selectedWord);
+      location.reload();
+    }
   });
-
-
-
-
-
-
 
   function chooseRandomWord() {
     var randomIndex =  Math.floor(Math.random() * words.length);
@@ -69,9 +61,8 @@ $(document).ready(function(){
     if ($.inArray(letter, letters) == -1){
       guesses--;
       $("#guesses").text(guesses);
+      $("#guess-field").append(letter);
     }
   }
-    chooseRandomWord();
+  chooseRandomWord();
 });
-  // Make the "#start" button call the "startGame" method on click.
-  // Make the "#guess" button call the "guessLetter" method on click.
