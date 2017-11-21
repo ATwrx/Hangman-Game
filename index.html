@@ -12,18 +12,18 @@
 
 <body>
   <!-- Title  Area-->
-  <div class="container jumbotron">
+  <div class="container">
     <div class="top-title">
       <h1 class="title">Holiday Hangman Game</h1>
-      <div id="pregame-message">
-        <h3>Press any key to get started!</h3>
+      <div id="pregame-message-box">
+        <h3 id="pregame-message">Press any key to get started!</h3>
       </div>
     </div>
     <hr>
 
     <!-- Main Game Area  -->
-    <p><b>Current Word:</b></p>
-    <div id="word-format"></div>
+    <p><b>Current Word:<div id="word-format" class="gold"></div></b></p>
+
 
     <!-- Scores/Guesses Section -->
 
@@ -31,13 +31,11 @@
       <span id="guesses">6</span>
     </p>
 
-    <div class="wrong-letter-box">
-      <h6>Incorrect Letters: </h6>
-
-      <div id="guess-field"></div>
+    <div id="wrong-letter-box">
+      <h6>Incorrect Letters: <span id="guess-field" class="gold"></span></h6>
     </div>
   </div>
-</div>
+
 
   <script type="text/javascript" src="assets/js/hangman.js"></script>
 </body>

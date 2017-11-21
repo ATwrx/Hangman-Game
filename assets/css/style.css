@@ -1,25 +1,40 @@
-
 body {
   background-color: green;
   color: white;
 }
 .container {
   margin-bottom: 50px;
-}
-.jumbotron {
   background-color: darkred;
-}
-.top-title {
   text-align: center;
+  height: 300px;
+  width: auto;
+  max-width: 960px;
   color: white;
 }
-h1.title {
+.title {
   font-size: 1.9em;
   font-weight: bolder;
 }
-h3.title {
-  font-size: 1.4em;
+.gold {
+  font-size: 1.1em;
+  color: rgba(255, 255, 0, 0.8);
 }
-.boxy {
-  border: 2px solid red;
+
+#pregame-message {
+  font-size: 1.4em;
+  padding-bottom: 5px;
+}
+#pregame-message-box {
+  height: 18.2px;
+}
+
+#word-format{
+  text-transform: capitalize;
+}
+#guess-field {
+  
+}
+#wrong-letter-box {
+  text-align: left;
+  font-size: 1.8em;
 }

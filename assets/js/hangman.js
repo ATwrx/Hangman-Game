@@ -21,7 +21,6 @@ $(document).ready(function(){
   function chooseRandomWord() {
     var randomIndex =  Math.floor(Math.random() * words.length);
     selectedWord = words[randomIndex];
-    numOfLetters = selectedWord.length;
     initializeGuessFields();
   }
 
@@ -43,7 +42,6 @@ $(document).ready(function(){
     })
     fields = guessFields.toString().replace(/,/g, " ");
     $("#word-format").text(fields);
-
   }
 
   function wordArray() {
@@ -64,5 +62,6 @@ $(document).ready(function(){
       $("#guess-field").append(letter);
     }
   }
+
   chooseRandomWord();
 });
